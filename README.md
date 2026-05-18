@@ -1,6 +1,6 @@
 # CS Assignments Portfolio
 
-A collection of university assignments demonstrating object-oriented design principles in Java and Python.
+A collection of university assignments demonstrating object-oriented design principles in Java and Python, and systems programming in C.
 
 ---
 
@@ -67,7 +67,44 @@ A two-player terminal game where hunters take turns collecting randomly placed t
 
 ---
 
+### 3. XOR Encryptor (C)
+**`XOR-Encryptor/`**
+
+A command-line C program that encrypts and decrypts files using XOR with a password key.
+
+**Concepts demonstrated:**
+- Systems programming with file I/O in binary mode
+- Password validation with character classification
+- XOR symmetric encryption (encrypting twice restores the original)
+- Formatted hex output
+
+**How it works:**
+1. Takes a filename and password as command-line arguments
+2. Validates the password (≥ 8 characters, at least 1 letter and 1 digit)
+3. XOR-encrypts the input file byte-by-byte, cycling through the password
+4. Writes the result to `new-<filename>`
+5. Prints the first 5 bytes of the output as lowercase hex
+
+**Usage:**
+```bash
+gcc -o A2 A2.c
+./A2 filename.txt Password1
+```
+
+**Key functions:**
+
+| Function | Role |
+|---|---|
+| `make_new_name` | Prepends `"new-"` to the original filename |
+| `is_alpha` / `is_digit` | Character classification without `<ctype.h>` |
+| `is_valid_password` | Validates length, letters, and digits |
+| `perform_XOR` | Reads input and writes XOR-encrypted output |
+| `print_first_five` | Prints first 5 bytes as lowercase hex |
+
+---
+
 ## Technologies
 
 - **Java** — Swing GUI, OOP, design patterns
 - **Python 3** — OOP, data structures, terminal I/O
+- **C** — Systems programming, file I/O, binary manipulation
