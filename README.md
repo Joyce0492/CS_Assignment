@@ -7,7 +7,7 @@ A collection of university assignments demonstrating object-oriented design prin
 ## Projects
 
 ### 1. Bus Tracker App (Java)
-**`A2-BusTrackerApp/`**
+**`BusTrackerApp/`**
 
 A Java Swing desktop application for managing bus routes, drivers, and stops.
 
